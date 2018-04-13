@@ -1,0 +1,22 @@
+{
+  "name": "kodesmots",
+  "version": "1.0.0",
+  "description": "Cette application est utilisée dans le cadre du spectacle KO des mots produit par AD2Production",
+  "main": "_KOServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rookie-club/kodesmots.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rookie-club/kodesmots/issues"
+  },
+  "homepage": "https://github.com/rookie-club/kodesmots#readme",
+  "dependencies": {
+    "websocket": "^1.0.25"
+  }
+}
