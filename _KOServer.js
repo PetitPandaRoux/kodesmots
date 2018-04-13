@@ -5,7 +5,7 @@ var http = require('http');
 
 var server = http.createServer(function(request, response) {
     console.log((new Date()) + ' Received request for ' + request.url);
-    response.writeHead(404);
+    response.write("Le serveur fonctionne.");
     response.end();
 });
 server.listen(9090, function() {
