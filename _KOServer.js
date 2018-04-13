@@ -2,6 +2,13 @@ var fs = require('fs');
 
 var WebSocketServer = require('websocket').server;
 var http = require('http');
+var express = require('express');
+var app = express();
+app.use(express.static('public'));
+
+app.listen(8080, function() {
+  console.log("Ready");
+});
 
 var server = http.createServer(function(request, response) {
     console.log((new Date()) + ' Received request for ' + request.url);
