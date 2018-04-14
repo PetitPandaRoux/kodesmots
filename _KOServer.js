@@ -7,8 +7,7 @@ var app = express();
 app.use(express.static('public'));
 
 app.listen(8080, function() {
-  console.log((new Date().toUTCString()) + ' Server is listening on port 8080');
-  console.log('LE K.O. DES MOTS - V1.0 - NOVEMBRE 2013 - LRDSIGN')
+  console.log((new Date().toUTCString()) + ' WebServer is listening on port 8080');
 });
 
 var server = http.createServer(function(request, response) {
@@ -17,7 +16,7 @@ var server = http.createServer(function(request, response) {
     response.end();
 });
 server.listen(9090, function() {
-    console.log((new Date().toUTCString()) + ' Server is listening on port 9090');
+    console.log((new Date().toUTCString()) + ' WSServer is listening on port 9090');
     console.log('LE K.O. DES MOTS - V1.0 - NOVEMBRE 2013 - LRDSIGN')
 });
 
