@@ -3,8 +3,6 @@
 // Durée par défaut des rounds en secondes, default 300 = 5 minutes
 var maxTime 		= 300; 
 
-/// Adresse IP du serveur (normalement à 192.168.1.1)
-var serverIP 		= "192.168.1.1"; 
 
 // Taille du texte ; orginialement 23
 var masterFont		= 23;

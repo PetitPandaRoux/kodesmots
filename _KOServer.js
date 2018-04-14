@@ -7,7 +7,8 @@ var app = express();
 app.use(express.static('public'));
 
 app.listen(8080, function() {
-  console.log("Ready");
+  console.log((new Date().toUTCString()) + ' Server is listening on port 8080');
+  console.log('LE K.O. DES MOTS - V1.0 - NOVEMBRE 2013 - LRDSIGN')
 });
 
 var server = http.createServer(function(request, response) {

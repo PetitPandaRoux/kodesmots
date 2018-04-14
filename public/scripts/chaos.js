@@ -1,5 +1,4 @@
-////// NE PAS TOUCHER 
-var host = "ws://" + serverIP + ":9090";
+var host = "ws://" + window.location.hostname + ":9090";
 
 function connect(host){
 	var socket;
