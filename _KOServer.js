@@ -4,10 +4,12 @@ var WebSocketServer = require('websocket').server;
 var http = require('http');
 var express = require('express');
 var app = express();
-app.use(express.static('public'));
+var express_port = process.env.EXPRESS_PORT || 80;
+var ws_port = process.env.WS_PORT || 9090;
+app.use(express.static(__dirname + '/public'));
 
-app.listen(8080, function() {
-  console.log((new Date().toUTCString()) + ' WebServer is listening on port 8080');
+app.listen(express_port, function() {
+  console.log((new Date().toUTCString()) + ' WebServer is listening on port ' + express_port);
 });
 
 var server = http.createServer(function(request, response) {
@@ -15,8 +17,8 @@ var server = http.createServer(function(request, response) {
     response.write("Le serveur fonctionne.");
     response.end();
 });
-server.listen(9090, function() {
-    console.log((new Date().toUTCString()) + ' WSServer is listening on port 9090');
+server.listen(ws_port, function() {
+    console.log((new Date().toUTCString()) + ' WSServer is listening on port ' + ws_port);
     console.log('LE K.O. DES MOTS - V1.0 - NOVEMBRE 2013 - LRDSIGN')
 });
 
