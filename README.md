@@ -2,7 +2,7 @@
 
 Cette application est utilisée dans le cadre du spectacle KO des mots produit par AD2Production
 
-[![Voir le teaser](https://www.youtube.com/watch?v=_Y2dDjVUGV4)
+[Voir le teaser](https://www.youtube.com/watch?v=_Y2dDjVUGV4)
 
 # Backlog
 
