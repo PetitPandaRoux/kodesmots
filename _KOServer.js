@@ -5,7 +5,7 @@ var WebSocketServer = require('websocket').server;
 var http = require('http');
 var express = require('express');
 var app = express();
-var express_port = process.env.EXPRESS_PORT || 80;
+var express_port = process.env.EXPRESS_PORT || 3000;
 var ws_port = process.env.WS_PORT || 9090;
 
 app.use(express.static(__dirname + '/public'));

@@ -4,6 +4,7 @@
   "description": "Cette application est utilisée dans le cadre du spectacle KO des mots produit par AD2Production",
   "main": "_KOServer.js",
   "scripts": {
+    "start": "node _KOServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
