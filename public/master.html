@@ -55,6 +55,9 @@
         }
         #containerBlue     { left: 0; background-color: rgba(0,0,255,0.8);}
         #containerRed     { right: 0; background-color: rgba(255,0,0,0.8);}
+        #containerBlue.alone, #containerRed.alone {
+            width: 100%;
+        }
 
         #textAreaBlue, 
         #textAreaRed{
@@ -139,28 +142,28 @@
 </head>
 <body id="master">
     
-    <div class="wrap">
+  <div class="wrap">
     <div id="info">
-        <div id="scoreBlue" class="score blue">0</div>
-        <div id="scoreRed" class="score red">0</div>
-        <div id="centerinfo"><span id="round">0</span><span id="time">00:00</span></div>
-        <div id="blitzinfo"><span id="bluetime"></span><span id="redtime"></span></div>
+      <div id="scoreBlue" class="score blue">0</div>
+      <div id="scoreRed" class="score red">0</div>
+      <div id="centerinfo"><span id="round">0</span><span id="time">00:00</span></div>
+      <div id="blitzinfo"><span id="bluetime"></span><span id="redtime"></span></div>
     </div>
     <div id="content">
-        <div id="containerBlue" class="blue">
-                <div id="textAreaBlue" class="texte"></div>
-                <div id="scrollBlue"></div>
-            </div>
-            <div id="containerRed" class="red">
-                <div id="textAreaRed" class="texte"></div>
-                <div id="scrollRed"></div>
-            </div>
+      <div id="containerBlue" class="blue">
+        <div id="textAreaBlue" class="texte"></div>
+        <div id="scrollBlue"></div>
+      </div>
+      <div id="containerRed" class="red">
+        <div id="textAreaRed" class="texte"></div>
+        <div id="scrollRed"></div>
+      </div>
     </div>
-    </div>
-    <div id="panneau">
-        <div id="fin"></div>
-        <div id="debut"></div>
-    </div>
+  </div>
+  <div id="panneau">
+    <div id="fin"></div>
+    <div id="debut"></div>
+  </div>
 
         <script src="scripts/master.js"></script>
 </body>

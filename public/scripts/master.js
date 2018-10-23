@@ -40,11 +40,24 @@ function start(){
     }else if(d['cmd'] == 'setblitztime'){
       updateBlitzClocks(d['from'], d['time']);
     }else if(d['cmd'] == 'resetblitz'){
-      resetBlitzDisplay();  
+      resetBlitzDisplay();
     }else if(d['cmd'] == 'clear'){
       doClearAll();
     }else if(d['cmd'] == 'panneau'){
       setPanneau(d);
+    }else if(d['cmd'] == 'blueOnly'){
+      $('containerBlue').addClassName('alone');
+      $('containerBlue').show();
+      $('containerRed').hide();
+    }else if(d['cmd'] == 'redOnly'){
+      $('containerBlue').hide();
+      $('containerRed').addClassName('alone');
+      $('containerRed').show();
+    }else if(d['cmd'] == 'bothColor'){
+      $('containerBlue').removeClassName('alone');
+      $('containerRed').removeClassName('alone');
+      $('containerBlue').show();
+      $('containerRed').show();
     }
   });
 

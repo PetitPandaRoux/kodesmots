@@ -297,6 +297,11 @@
 			<button id="lockred" class="lock red">&#xf023</button>
 			<button id="unlockred" class="lock red">&#xf09c</button>
 		</div>
+		<div id="mastercontrols">
+			<button id="blueonly">show bleu</button>
+			<button id="redonly">show red</button>
+			<button id="bothcolor">show both players</button>
+		</div>
 		
 	</div>
 	<div id="right">
@@ -368,7 +373,17 @@
 
 			$('pausepause').addEventListener('click' , pauseRound);
 			$('pausepauseBlitz').addEventListener('click' , pauseBlitz);
-			start(); 
+
+                        $('blueonly').addEventListener('click' , function() {
+                            sendAction('blueOnly');
+                        });
+                        $('redonly').addEventListener('click' , function() {
+                            sendAction('redOnly');
+                        });
+                        $('bothcolor').addEventListener('click' , function() {
+                            sendAction('bothColor');
+                        });
+			start();
 		});
 	
 	
@@ -540,11 +555,14 @@
 	}
 
 
+        function sendAction(action) {
+		jSend({ 'cmd' : 'diffuse' , 'action' : action} , socket);
+        }
 	function lock(){
-		jSend({ 'cmd' : 'diffuse' , 'action' : 'lock'} , socket);
+		sendAction('lock');
 	}
 	function unlock(){
-		jSend({ 'cmd' : 'diffuse' , 'action' : 'unlock'} , socket);
+		sendAction('unlock');
 	}
 
 	function lockOne(who){
@@ -568,9 +586,6 @@
 	function unlockRed(){
 		unlockOne('red');
 	}
-
-
-
 
 
 	window.onbeforeunload = function (event) {
