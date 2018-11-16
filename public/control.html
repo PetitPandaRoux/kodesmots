@@ -163,11 +163,11 @@
 	#left button{
 		font-size: 20px;
 	}
-	#othercontrols{
+	#othercontrols, #mastercontrols{
 		padding-top: 5px;
 		clear: both;
 	}
-	#lock, #unlock, #clear, #save, #reconnect, #getstate{
+	#lock, #unlock, #clear, #save, #reconnect, .getstate, .mastershow{
 		display: inline-block;
 	}
 	#clear, #save{
@@ -298,9 +298,9 @@
 			<button id="unlockred" class="lock red">&#xf09c</button>
 		</div>
 		<div id="mastercontrols">
-			<button id="blueonly">show bleu</button>
-			<button id="redonly">show red</button>
-			<button id="bothcolor">show both players</button>
+			<button id="blueonly" class="mastershow blue">show bleu</button>
+			<button id="redonly" class="mastershow red">show red</button>
+			<button id="bothcolor" class="mastershow both">show both</button>
 		</div>
 		
 	</div>
