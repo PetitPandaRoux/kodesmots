@@ -15,22 +15,12 @@ app.get('/eteindre', function(req,res) {
   });
 })
 
-app.listen(express_port, function() {
+var webserver = app.listen(express_port, function() {
   console.log((new Date().toUTCString()) + ' WebServer is listening on port ' + express_port);
 });
 
-var server = http.createServer(function(request, response) {
-    console.log((new Date()) + ' Received request for ' + request.url);
-    response.write("Le serveur fonctionne.");
-    response.end();
-});
-server.listen(ws_port, function() {
-    console.log((new Date().toUTCString()) + ' WSServer is listening on port ' + ws_port);
-    console.log('LE K.O. DES MOTS - V1.0 - NOVEMBRE 2013 - LRDSIGN')
-});
-
 wsServer = new WebSocketServer({
-    httpServer: server,
+    httpServer: webserver,
     // You should not use autoAcceptConnections for production
     // applications, as it defeats all standard cross-origin protection
     // facilities built into the protocol and the browser.  You should

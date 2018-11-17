@@ -1,4 +1,4 @@
-var host = "ws://" + window.location.hostname + ":9090";
+var host = location.origin.replace(/^http/, 'ws');
 
 function connect(host){
 	var socket;
